@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order Desk Explorer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/floor.css">
+  <link rel="stylesheet" href="styles/simulator.css">
+  <link rel="stylesheet" href="styles/atlas.css">
+</head>
+<body>
+  <a class="skip" href="#view">Skip to content</a>
+  <header class="app-header">
+    <a class="brand" href="#/">
+      <strong>Order Desk</strong>
+      <span>Explorer</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a data-nav="mission" href="#/">Start</a>
+      <a data-nav="floor" href="#/floor">Floor</a>
+      <a data-nav="sim" href="#/sim">Simulate</a>
+      <a data-nav="atlas" href="#/atlas">Atlas</a>
+      <a data-nav="challenge" href="#/challenge">Challenges</a>
+    </nav>
+    <button type="button" class="search-btn" id="search-open">Search <kbd>/</kbd></button>
+  </header>
+  <main id="view" tabindex="-1"></main>
+  <div class="backdrop" id="backdrop" hidden></div>
+  <aside class="inspector" id="inspector" aria-hidden="true" aria-label="Detail">
+    <header>
+      <div>
+        <p class="kicker" data-kicker></p>
+        <h2 data-title></h2>
+      </div>
+      <button type="button" class="icon-btn" data-close>Close</button>
+    </header>
+    <div class="body" data-body></div>
+  </aside>
+  <div class="search-layer" id="search-layer" aria-hidden="true">
+    <div class="search-box" role="dialog" aria-label="Search the explorer">
+      <input id="search-input" type="search" placeholder="Try SkyDoc, externalId, session, 340…" autocomplete="off">
+      <div class="search-hits" id="search-hits"></div>
+    </div>
+  </div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
