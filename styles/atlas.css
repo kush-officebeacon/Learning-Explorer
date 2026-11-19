@@ -1,0 +1,40 @@
+.atlas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin: 20px 0 48px;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.atlas-grid a {
+  display: block;
+  padding: 18px 16px 16px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+  min-height: 140px;
+  background: rgba(16, 22, 20, 0.55);
+}
+.atlas-grid a:hover { background: rgba(47, 191, 160, 0.08); text-decoration: none; }
+.atlas-grid small { color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; font-size: 11px; }
+.atlas-grid strong { display: block; font-family: var(--font-display); font-size: 22px; margin: 8px 0; letter-spacing: -0.03em; }
+.atlas-grid p { margin: 0; color: var(--muted); font-size: 14px; }
+
+.topic { padding-bottom: 56px; }
+.topic-head { padding-top: 28px; display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 24px; align-items: end; }
+.beats { margin-top: 8px; }
+.beat {
+  border-top: 1px solid var(--line);
+  padding: 14px 0;
+}
+.beat h3 { font-size: 18px; }
+.beat p { margin: 6px 0 0; color: var(--muted); }
+
+.challenge-card { max-width: 720px; }
+.score-quiet { color: var(--faint); font-size: 13px; margin-top: 8px; }
+
+@media (max-width: 860px) {
+  .atlas-grid { grid-template-columns: 1fr; }
+  .topic-head { grid-template-columns: 1fr; }
+}
